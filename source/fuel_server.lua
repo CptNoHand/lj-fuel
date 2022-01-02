@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 -- refuel vehicle menu
-RegisterNetEvent("lj-fuel:server:OpenMenu", function (amount, inGasStation)
+RegisterNetEvent("cc-fuel:server:OpenMenu", function (amount, inGasStation)
 	local src = source
 	if not src then return end
 	local player = QBCore.Functions.GetPlayer(src)
@@ -14,7 +14,7 @@ RegisterNetEvent("lj-fuel:server:OpenMenu", function (amount, inGasStation)
 			header = 'Gas Station',
 			txt = 'The total cost is going to be: $'..total..' including taxes.' ,
 			params = {
-				event = "lj-fuel:client:RefuelVehicle",
+				event = "cc-fuel:client:RefuelVehicle",
 				args = total,
 			}
 		},
@@ -28,7 +28,7 @@ end
 				header = 'Gas Station',
 				txt = 'The total cost is going to be: $'..total..' including taxes.' ,
 				params = {
-					event = "lj-fuel:client:RefuelVehicle",
+					event = "cc-fuel:client:RefuelVehicle",
 					args = total,
 				}
 			},
@@ -37,7 +37,7 @@ end
 end)
 
 -- fuel pay
-RegisterNetEvent("lj-fuel:server:PayForFuel", function (amount)
+RegisterNetEvent("cc-fuel:server:PayForFuel", function (amount)
 	local src = source
 	if not src then return end
 	local player = QBCore.Functions.GetPlayer(src)

@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'lj-fuel'
+description 'cc-fuel'
 version '1.2'
 author 'github.com/loljoshie'
 
